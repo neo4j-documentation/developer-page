@@ -33,7 +33,8 @@ export default function Graph() {
       nodes={nevadaNodes}
       rels={nevadaRels}
       nevadaOptions={{
-        initialZoom: 2
+        initialZoom: 2,
+        layoutOptions: {}
       }}
     />
     {/* <button onClick={() => {
