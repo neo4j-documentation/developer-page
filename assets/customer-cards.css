@@ -1,0 +1,358 @@
+@font-face{font-family:Nudista;src:url(/nudista_semibold-webfont.woff);font-display:swap}
+
+.blazing-fast .left-column {
+  z-index: 10;
+  background: rgba(238,241,246, 0.8);
+}
+
+.customer-card {
+    text-decoration: none;
+    margin: 0 auto;
+    border-radius: 16px;
+    min-height: 342px;
+    width: 266px;
+    cursor: pointer;
+    border-radius: 16px;
+    background-color: #fff;
+    border: 1px solid rgba(196, 200, 205, 0.5);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+
+  @media (min-width: 1024px) and (max-width:1098px) {
+    .customer-card {
+      margin-bottom: 20px;
+      width: 224px;
+    }
+  }
+
+  @media (min-width: 1099px) {
+    .customer-card {
+      margin-bottom: 20px;
+      width: 242px;
+    }
+  }
+
+  .customer-card:link,
+  .customer-card:visited,
+  .customer-card:hover,
+  .customer-card:active {
+    text-decoration: none;
+  }
+
+  .customer-card:hover {
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.12);
+  }
+
+  .customer-card img:first-of-type {
+    z-index: 0;
+    padding-top: 1.3rem;
+    padding-left: 1.3rem;
+    align-self: flex-start;
+  }
+
+.examples {
+	display: flex;
+	width: 100%;
+}
+.example {
+  margin-top: 40px;
+	display: flex;
+	flex-direction: column;
+	flex: 0 0 20%;
+  /* background-color: white; */
+	border: 1px solid rgba(196, 200, 205, 0.5);
+	padding: 1rem;
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
+  border-bottom-width: 6px;
+}
+.example p {
+	flex-grow: 1;
+}
+
+.example h2 {
+	font-size: 1.125rem;
+}
+.example--active {
+  background-color: white;
+  border-bottom-color: #006fd6;
+  margin-top: 0;
+}
+
+.persona-tabs {
+  display: flex;
+  font-size: 1.2rem;
+  justify-content: flex-end;
+  height: 52px;
+}
+.persona-tab {
+  margin-right: 32px;
+}
+
+.persona-tab a {
+  padding: 16px 4px;
+  border-bottom: 5px solid transparent;
+}
+
+.persona-tab--active a {
+  border-bottom-color: #006fd6;
+}
+
+
+
+.admin-bar #background-image {
+  top: 136px;
+}
+
+.video-bg{
+  background-image: url('https://dist.neo4j.com/wp-content/uploads/20220610093542/Node-motifs.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
+
+.dark-tabs{
+  background: linear-gradient(149.27deg, #1E2936 58.28%, rgba(30, 41, 54, 0.878749) 98.91%, rgba(30, 41, 54, 0.670424) 103.16%, rgba(30, 41, 54, 0) 106.68%);
+  border-radius: 25px;
+}
+
+.tabs{
+  border: none;
+  text-align: center;
+}
+
+.tabs-content{
+  border: none;
+}
+
+.tabs-title {
+  float: none !important;
+  display: inline-block;
+  width: 20%;
+  background: #717780;
+  color: #151E29;
+}
+
+.tabs-title>a {
+  color: #151E29;
+}
+
+.tabs-title>a:hover{
+  border-top: 5px solid #A3E2FF;
+  color: #151E29;
+}
+
+.tabs-title>a:focus, .tabs-title>a[aria-selected=true]{
+  border-top: none;
+}
+
+.tabs-title>a:focus, .tabs-title>a[aria-selected=true] {
+  background: #151E29;
+  border-top: 5px solid #7AD1FF;
+  color: #fff;
+}
+
+#four-col a{
+  color: #535B66;
+}
+
+#four-col .card-hover-animation{
+  /*border-left: 4px solid #fff;*/
+}
+
+#four-col .card-hover-animation:hover, #get-started .card-hover-animation:hover{
+  /*border-left: 4px solid #018BFF;*/
+}
+
+#four-col .card-hover-animation a:link, #get-started .card-hover-animation a:link{
+  text-decoration: none;
+}
+
+#build-run a{
+  color: #fff;
+}
+
+
+.tabs-panel{
+  min-height: 300px;
+}
+
+[type=checkbox]+label[for]{
+  color: #9d9d9d;
+  line-height: 1.3;
+  text-align: left;
+}
+
+.mktoFormRow.privacy-policy{
+  color: #9d9d9d;
+}
+
+section#callout {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+section#hero-primary {
+  padding-bottom: 3rem;
+  padding-top: 1rem;
+}
+
+section#four-col {
+  padding-bottom: 0;
+  padding-top: 3rem;
+}
+
+section#build-run {
+  padding-bottom: 4rem;
+}
+
+section#cta {
+  padding-top: 4rem;
+}
+
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+  #hero-primary{
+    padding-top: 0px;
+  }
+
+  #hero-primary .video-bg{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  #developer-home .section-subtitle {
+    padding-right: 0;
+  }
+
+  #developer-home [data-open^="video-modal"] {
+    margin-right: 0;
+  }
+
+  #developer-home .cta-container {
+    justify-content: space-evenly;
+  }
+
+  [id^=video-modal] {
+    width: 100% !important;
+  }
+
+  .video-modal-reveal {
+    padding: 1rem 0 0 0 !important;
+  }
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+  .sticky{
+    position: sticky;
+    top: 200px;
+  }
+
+  #background-image {
+    background-image: url('https://dist.neo4j.com/wp-content/uploads/20220705160754/BKGD-Art_SingleLargePiece3.svg');
+    width: 100%;
+    min-height: 6023px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 104px;
+    z-index: -1;
+  }
+
+}
+
+.image-transition{
+  border: 1px solid #018BFF;
+  border-radius: 0.375rem;
+  background-color: rgba(245,247,250);
+}
+
+.fade {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.fadeOut {
+  opacity: 0;
+  transform: translateY(45px);
+  transition: transform 0.6s, opacity 0.9s  ease-in;
+}
+
+
+@keyframes scale {
+  0% {
+    transform: scale(100%);
+  }
+
+  80% {
+    transform: scale(102%);
+  }
+
+  100% {
+    transform: scale(100%);
+  }
+}
+
+.fadeIn {
+  opacity: 1;
+  animation: 1s in-out forwards;
+}
+
+.video-modal-reveal {
+  box-sizing: border-box;
+  width: 90%;
+  max-width: 1200px;
+  max-height: 100vh;
+  padding: 30px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+  height: initial;
+  overflow-y: auto;
+  margin: 0 auto;
+  min-height: auto;
+}
+
+.video-modal-reveal h3 {
+  padding-left: 2rem;
+  padding-bottom: 0;
+}
+
+.video-modal {
+  position: relative;
+  padding-bottom: 51.25%;
+  padding-top: 25px;
+  height: 0;
+  margin-bottom: 41px;
+  text-align: center;
+}
+
+.video-modal iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+}
+
+
+.graph-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  z-index: 1;
+}
+.blazing-fast .grid-x {
+  position: relative;
+  z-index: 10;
+}

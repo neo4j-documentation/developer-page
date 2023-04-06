@@ -1,15 +1,43 @@
 ---
+import "../../assets/customer-cards.css";
+
+import Header from "../components/header.astro";
+import Footer from "../components/footer.astro";
+import Hero from "../components/hero.astro";
+import UseCases from "../components/use-cases.astro";
+import Drivers from "../components/drivers.astro";
+import FeaturedContent from "../components/feed/featured-content.astro";
+import Community from "../components/community.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- <meta name="generator" content={Astro.generator} /> -->
+    <link
+      rel="stylesheet"
+      href="https://neo4j.com/wp-content/themes/neo4jweb/assets_v2/dist/app.min.css?ver=1680299264"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
+      rel="preload"
+    />
+    <title>Neo4j Developer Page</title>
+  </head>
+  <body>
+    <Header />
+    <Hero />
+    <UseCases />
+    <Drivers />
+    <Community />
+    <FeaturedContent />
+    <Footer />
+  </body>
 </html>

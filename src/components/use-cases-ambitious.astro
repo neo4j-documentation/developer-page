@@ -1,0 +1,103 @@
+---
+const examples = [
+  {
+    title: "Network Management",
+    description:
+      "Dependency and root cause analysis and more for network and IT management graph example",
+  },
+  {
+    id: "recommendations",
+    title: "Movie Recommendations",
+    description:
+      "There are many factors that can be used to recommend a movie.  You could incorporate actors, directors, or even the ratings of similar users to provide a recommendation.",
+    callToAction: "Open in Neo4j Sandbox",
+  },
+  { title: "Social Networks", description: "Twitch Streamer Analysis," },
+  {
+    title: "Stack Overflow",
+    description: "Stack Overflow Questions, Answers, Tags, and Comments",
+  },
+  // {
+  //   title: "Pole",
+  //   description:
+  //     "Crime Investigation - Explore connections in crime data using the POLE - Person, Object, Location, Event - model in a public dataset from Manchester, U.K.",
+  // },
+  // {
+  //   title: " icij-offshoreleaks",
+  //   description:
+  //     "Forked from ICIJ/offshoreleaks-data-packages ICIJ Offshoreleaks Database, Neo4j powering https://offshoreleaks.icij.org/",
+  // },
+];
+---
+
+<div class="section-why" style="content-visibility:auto">
+  <section id="why-neo4j">
+    <div class="grid-container">
+      <div class="grid-x grid-padding-x-lg gap-y-20 items-center">
+        <div class="cell">
+          <div class="grid-x grid-padding-x-lg grid-padding-y">
+            <div class="cell small-8 medium-4">
+              <!-- <p class="text-overline">The Graph Technology Leader</p> -->
+              <h3>Graphs Are Everywhere</h3>
+              <p>
+                Nodes and Relationships provide the building blocks for a fast,
+                flexible data store. The Use Cases below should be enough to get
+                you inspired.
+              </p>
+
+              <ul class="pt-8">
+                {
+                  examples.map((example) => (
+                    <li class="pb-4">
+                      <a
+                        href="#"
+                        class="arrowed"
+                        style="font-weight: bold; font-size: 1.125rem"
+                      >
+                        {example.title}
+                      </a>
+                      <p>{example.description}</p>
+                    </li>
+                  ))
+                }
+              </ul>
+
+              <!-- <div>
+            <a class="arrowed" data-l="learn about performance" href="/product/neo4j-graph-database/scalability/?ref=home">Learn more about Performance</a>
+          </div> -->
+            </div>
+            <div class="cell small-16 medium-7 medium-offset-1">
+              <h3>Movie Recommendations</h3>
+
+              <p>
+                Graph databases, like Neo4j, are well-suited for recommendation
+                systems due to their ability to store and traverse highly
+                connected data efficiently. Leveraging index-free adjacency,
+                graph databases enable constant-time traversals of
+                relationships, regardless of the overall data size.
+              </p>
+              <p>
+                This capability is critical for recommendation algorithms, such
+                as collaborative filtering, where traversing connections between
+                users, items, and their attributes is essential to identify
+                patterns and compute similarity scores.
+              </p>
+              <h4>The Data Model</h4>
+              <p>
+                The data model contains <code>(:Person)</code> nodes that represent
+                actors or directors. <code>(:Movie)</code> nodes
+              </p>
+
+              <img
+                src="https://github.com/neo4j-graph-examples/recommendations/raw/main/documentation/img/model.png"
+                alt=""
+              />
+
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

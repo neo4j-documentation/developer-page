@@ -1,0 +1,9 @@
+---
+const { id, title, description } = Astro.props
+---
+
+<div class={id === 'recommendations' ? 'example example--active' : 'example'}>
+    <h2>{title}</h2>
+    <p>{description}</p>
+    <a class="button hollow" href={`#${id}`}>Demo {title}</a>
+</div>

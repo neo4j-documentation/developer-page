@@ -1,0 +1,902 @@
+<div id="menu-container-main" class="show-for-large bg-white shadow-sm sticky z-50" data-c="main navigation">
+    <div id="eyebrow-menu-container">
+      <div id="eyebrow-menu" class="grid-container vertical-flex justify-center">
+        <div class="top-bar desktop-top-menu">
+          <div class="top-bar-right">
+            <style>
+    #marketo-contact-us-modal {
+      width: 600px;
+      max-width: 75rem;
+      border: none;
+      border-style: none;
+      position: fixed;
+      margin: 0 auto;
+      top: 2rem !important;
+      right: 0;
+      left: 0;
+      bottom: auto;
+      max-height: 55rem;
+    }
+
+    #marketo-contact-us-modal form {
+      font-family: "Nunito Sans","Helvetica Neue",helvetica,roboto,arial,sans-serif !important;
+    }
+
+    #marketo-contact-us-modal .close-button {
+      appearance: none;
+      border: 0;
+      border-radius: 5px;
+      background: 0 0;
+      position: absolute;
+      z-index: 10;
+      color: #404752;
+      cursor: pointer;
+      right: 1rem;
+      top: 0.5rem;
+      font-size: 2em;
+      line-height: 1;
+      font-weight: 100;
+      padding: 0;
+    }
+
+    #marketo-contact-us-modal h4 {
+      line-height: 1.3;
+      letter-spacing: .25px;
+      font-family: Nudista;
+      padding-bottom: 0.5rem;
+      font-size: 1.5625rem;
+      margin-top: 0;
+    }
+
+    #marketo-contact-us-modal input {
+      height: 40px!important;
+      border-radius: 4px!important;
+      box-shadow: none!important;
+      width: 320px!important;
+      padding: 16px!important;
+      border: 1px solid #91a1ae!important;
+      font-size: 16px!important;
+      margin-bottom: 0!important;
+      display: block;
+      box-sizing: border-box;
+      margin: 0 0 1rem;
+      background-color: #fff;
+      font-family: inherit;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #151e29;
+      transition: box-shadow .5s,border-color .25s ease-in-out;
+      appearance: none;
+    }
+
+    #marketo-contact-us-modal input::placeholder, #marketo-contact-us-modal select, #marketo-contact-us-modal textarea::placeholder {
+      color: rgb(117, 117, 117) !important;
+      font-weight: lighter !important;
+    }
+
+    #marketo-contact-us-modal .neo-marketo-form .mktoFormRow, #marketo-contact-us-modal .neo-marketo-form .mktoButtonRow {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    #marketo-contact-us-modal .mktoForm .mktoButton {
+      width: 320px!important;
+      padding: 16px!important;
+      background: #018bff!important;
+      border: none!important;
+      font-size: 16px!important;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    #marketo-contact-us-modal .mktoForm .mktoAsterix{
+      display: none;
+    }
+
+    #marketo-contact-us-modal select {
+      height: 40px!important;
+      border-radius: 4px!important;
+      box-shadow: none!important;
+      width: 320px!important;
+      border: 1px solid #91a1ae!important;
+      font-size: 16px!important;
+      margin-bottom: 0!important;
+      padding: 0 32px 0 16px!important;
+      margin: 0 0 1rem;
+      appearance: none;
+      background-color: #fff;
+      font-family: inherit;
+      line-height: 1.5;
+      background-origin: content-box;
+      background-position: right -1rem center;
+      background-repeat: no-repeat;
+      background-size: 9px 6px;
+      transition: box-shadow .5s,border-color .25s ease-in-out;
+    }
+
+    #marketo-contact-us-modal .mktoErrorMsg {
+      text-align: left;
+      margin-top: 4px;
+      --tw-text-opacity: 1;
+      color: rgba(237,18,82,var(--tw-text-opacity));
+      font-size: .875rem;
+      line-height: 1.25rem;
+    }
+
+    #marketo-contact-us-modal textarea {
+      border-radius: 4px!important;
+      box-shadow: none!important;
+      width: 320px!important;
+      padding: 16px!important;
+      border: 1px solid #91a1ae!important;
+      font-size: 16px!important;
+      height: auto;
+      max-height: 5rem;
+    }
+
+    #marketo-contact-us-modal .mktoFormCol {
+      margin-bottom: 16px!important;
+    }
+
+    #marketo-contact-us-modal .privacy-policy {
+      width: 320px!important;
+      margin: auto!important;
+      margin-top: 24px!important;
+      font-size: 14px!important;
+    }
+
+    #marketo-contact-us-modal .privacy-policy .mktoHtmlText {
+      color: #151e29;
+      text-align: center;
+    }
+
+    #marketo-contact-us-modal a {
+      color: #0070d9;
+      font-weight: normal;
+      text-decoration: none;
+    }
+
+    #marketo-contact-us-modal a:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+
+    #marketo-contact-us-modal label {
+      display: block;
+      margin: 0;
+      font-size: .875rem;
+      font-weight: 400;
+      line-height: 1.8;
+      color: #151e29;
+    }
+
+    #eyebrow-menu a:focus {
+      color: rgba(64,71,82,1);
+      text-decoration: none;
+    }
+
+    #eyebrow-menu a:hover {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    #eyebrow-menu-items li:focus-visible {
+      outline-style: solid;
+      outline-width: 2px;
+      border-radius: 2px;
+    }
+
+  </style>
+
+
+  <ul class="items-center z-20 flex m-0 mt-2" id="eyebrow-menu-items">
+        <li id="Partners" tabindex="0" class="m-0 mr-6 group relative">
+      <a href="/partners/" class="text-xs font-normal text-charcoal hover:text-black p-0 cursor-pointer">Partners <i class="n-icon n-icon-chevron-down n-icon-sm ml-1" aria-hidden="true"></i></a>        <div class="hidden group-hover:block absolute pt-2 z-50" style="left: -24px">
+        <ul class="py-2 border-none border-radius shadow-md dropdown-submenu rounded-md">
+                  <li class="hover:bg-whitesmoke m-0 relative">
+            <a href="/partners/directory/" data-l="Find a Partner" class="menu-dropdown-item  px-4 py-2 block">
+              <span class="block whitespace-nowrap text-charcoal text-xs">Find a Partner</span>
+            </a>
+          </li>
+                  <li class="hover:bg-whitesmoke m-0 relative">
+            <a href="/partners/neo4j-partner-program/" data-l="Become a Partner" class="menu-dropdown-item  px-4 py-2 block">
+              <span class="block whitespace-nowrap text-charcoal text-xs">Become a Partner</span>
+            </a>
+          </li>
+                  <li class="hover:bg-whitesmoke m-0 relative">
+            <a href="/partners/solution-partners/" data-l="Solution Partners" class="menu-dropdown-item  px-4 py-2 block">
+              <span class="block whitespace-nowrap text-charcoal text-xs">Solution Partners</span>
+            </a>
+          </li>
+                  <li class="hover:bg-whitesmoke m-0 relative">
+            <a href="/partners/oem-partners/" data-l="OEM Partners" class="menu-dropdown-item  px-4 py-2 block">
+              <span class="block whitespace-nowrap text-charcoal text-xs">OEM Partners</span>
+            </a>
+          </li>
+                  <li class="hover:bg-whitesmoke m-0 relative">
+            <a href="/partners/technology-partners/" data-l="Technology Partners" class="menu-dropdown-item  px-4 py-2 block">
+              <span class="block whitespace-nowrap text-charcoal text-xs">Technology Partners</span>
+            </a>
+          </li>
+                  <li class="hover:bg-whitesmoke m-0 relative">
+            <a href="https://partner.neo4j.com/" data-l="Partner Portal Login" target="_blank" rel="noopener" class="menu-dropdown-item  px-4 py-2 block">
+              <span class="block whitespace-nowrap text-charcoal text-xs">Partner Portal Login</span>
+            </a>
+          </li>
+                </ul>
+      </div>
+        </li>
+        <li id="Company" tabindex="0" class="m-0 mr-6 group relative">
+      <span class="text-xs font-normal text-charcoal hover:text-black p-0 cursor-default">Company <i class="n-icon n-icon-chevron-down n-icon-sm ml-1" aria-hidden="true"></i></span>        <div class="hidden group-hover:block absolute pt-2 z-50" style="left: -24px">
+        <ul class="py-2 border-none border-radius shadow-md dropdown-submenu rounded-md">
+                  <li class="hover:bg-whitesmoke m-0 relative">
+            <a href="/company/" data-l="About Us" class="menu-dropdown-item  px-4 py-2 block">
+              <span class="block whitespace-nowrap text-charcoal text-xs">About Us</span>
+            </a>
+          </li>
+                  <li class="hover:bg-whitesmoke m-0 relative">
+            <a href="/newsroom/" data-l="Newsroom" class="menu-dropdown-item  px-4 py-2 block">
+              <span class="block whitespace-nowrap text-charcoal text-xs">Newsroom</span>
+            </a>
+          </li>
+                  <li class="hover:bg-whitesmoke m-0 relative">
+            <a href="/awards/" data-l="Awards and Honors" class="menu-dropdown-item  px-4 py-2 block">
+              <span class="block whitespace-nowrap text-charcoal text-xs">Awards and Honors</span>
+            </a>
+          </li>
+                  <li class="hover:bg-whitesmoke m-0 relative">
+            <a href="/graphs4good/" data-l="Graphs4Good" class="menu-dropdown-item  px-4 py-2 block">
+              <span class="block whitespace-nowrap text-charcoal text-xs">Graphs4Good</span>
+            </a>
+          </li>
+                  <li class="hover:bg-whitesmoke m-0 relative">
+            <a href="/careers/" data-l="Careers" class="menu-dropdown-item  px-4 py-2 block">
+              <span class="block whitespace-nowrap text-charcoal text-xs">Careers</span>
+            </a>
+          </li>
+                  <li class="hover:bg-whitesmoke m-0 relative">
+            <a href="/culture/" data-l="Culture" class="menu-dropdown-item  px-4 py-2 block">
+              <span class="block whitespace-nowrap text-charcoal text-xs">Culture</span>
+            </a>
+          </li>
+                  <li class="hover:bg-whitesmoke m-0 relative">
+            <a href="/diversity-and-inclusion/" data-l="Diversity" class="menu-dropdown-item  px-4 py-2 block">
+              <span class="block whitespace-nowrap text-charcoal text-xs">Diversity</span>
+            </a>
+          </li>
+                  <li class="hover:bg-whitesmoke m-0 relative">
+            <a href="/leadership/" data-l="Leadership" class="menu-dropdown-item  px-4 py-2 block">
+              <span class="block whitespace-nowrap text-charcoal text-xs">Leadership</span>
+            </a>
+          </li>
+                </ul>
+      </div>
+        </li>
+        <li id="Support" class="m-0 mr-6 group relative">
+      <a href="https://support.neo4j.com/" class="text-xs font-normal text-charcoal hover:text-black p-0 cursor-pointer">Support </a>      </li>
+
+
+  <li id="LanguageMenu" tabindex="0" class="group horizontal-flex language-menu p-2 m-0 hover:bg-whitesmoke rounded cursor-pointer relative" style="line-height: 0;">
+      <span class="hover:text-black p-0 cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="23.82 23.77 52.4 52.42">
+              <path d="M74.125 39.777c-1.3203-3.1172-3.207-5.918-5.6094-8.3242-2.4062-2.4062-5.2031-4.293-8.3242-5.6094-3.2305-1.3672-6.6562-2.0586-10.191-2.0586s-6.9648.69141-10.191 2.0586c-3.1172 1.3203-5.918 3.207-8.3242 5.6094-2.4062 2.4062-4.293 5.2031-5.6094 8.3242-1.3672 3.2305-2.0586 6.6562-2.0586 10.191s.69141 6.9648 2.0586 10.191c1.3203 3.1172 3.207 5.918 5.6094 8.3242 2.4023 2.4023 5.2031 4.293 8.3242 5.6094 3.2305 1.3672 6.6562 2.0586 10.191 2.0586s6.9648-.69141 10.191-2.0586c3.1172-1.3203 5.918-3.207 8.3242-5.6094 2.4023-2.4023 4.293-5.2031 5.6094-8.3242 1.3672-3.2305 2.0586-6.6562 2.0586-10.191s-.69141-6.9648-2.0586-10.191zm-.46875 8.9453h-9.0703c-.16406-4.1094-1.0859-8.1133-2.6992-11.773 1.8281-.93359 3.5547-2.0859 5.1367-3.4414 3.8555 3.9883 6.3281 9.3164 6.6328 15.215zm-22.41-21.355c2.9766 2.1797 5.4375 5.043 7.2617 8.3594-2.3086.88672-4.7539 1.4141-7.2617 1.543zm-2.4922 0v9.9023c-2.5078-.13281-4.9531-.65625-7.2617-1.543 1.8242-3.3164 4.2852-6.1797 7.2617-8.3594zm0 12.398v8.9531l-10.84.003906c.16406-3.8047 1.0234-7.4531 2.4688-10.75 2.6523 1.0469 5.4766 1.6602 8.3711 1.793zm0 11.449v8.9531c-2.918.13672-5.7656.75781-8.4375 1.8242-1.4297-3.3086-2.2695-6.9688-2.4102-10.777zm0 11.453v10.094c-3.0195-2.2148-5.5117-5.1367-7.3438-8.5156 2.3281-.91016 4.8047-1.4453 7.3438-1.5781zm2.4922 10.098v-10.098c2.5391.13281 5.0156.66797 7.3516 1.5781-1.8359 3.3828-4.3281 6.3047-7.3516 8.5195zm0-12.598v-8.9531h10.852c-.14062 3.8086-.97656 7.4688-2.4102 10.777-2.6719-1.0625-5.5195-1.6836-8.4414-1.8242zm0-11.445v-8.957c2.8945-.13672 5.7188-.75 8.3711-1.7969 1.4492 3.2969 2.3086 6.9453 2.4727 10.75zm13.938-16.926c-1.3633 1.1406-2.8398 2.1133-4.3984 2.9102-.011718-.019531-.023437-.039062-.03125-.058593-1.6797-3.082-3.8438-5.7773-6.3711-7.9648 4.0586.76562 7.7539 2.5625 10.801 5.1133zm-19.566-5.1133c-2.5273 2.1875-4.6914 4.8867-6.3711 7.9648-.011719.019531-.019532.039062-.03125.058593-1.5586-.79688-3.0352-1.7734-4.3984-2.9141 3.0469-2.5469 6.7422-4.3438 10.801-5.1094zm-12.641 6.8242c1.5859 1.3555 3.3086 2.5078 5.1367 3.4414-1.6133 3.6562-2.5352 7.6641-2.6992 11.773h-9.0742c.30859-5.8984 2.7812-11.227 6.6367-15.215zm-6.6328 17.707h9.0664c.14062 4.1133 1.043 8.1328 2.6367 11.805-1.8047.92578-3.5078 2.0664-5.0703 3.4062-3.8555-3.9844-6.3281-9.3164-6.6328-15.211zm8.4727 16.926c1.3398-1.1211 2.7891-2.082 4.3203-2.8711.027343.054688.054687.10547.085937.16016 1.6211 2.9883 3.6992 5.6172 6.1172 7.7695-3.9492-.79297-7.5469-2.5664-10.523-5.0586zm19.852 5.0547c2.418-2.1562 4.4961-4.7852 6.1172-7.7695.027344-.050781.054688-.10156.082032-.15625 1.5273.78906 2.9766 1.75 4.3164 2.8711-2.9766 2.4883-6.5703 4.2617-10.516 5.0547zm12.355-6.7656c-1.5625-1.3398-3.2656-2.4766-5.0664-3.4062 1.5977-3.6719 2.4961-7.6953 2.6367-11.809h9.0625c-.30469 5.8945-2.7773 11.227-6.6328 15.215z"></path>
+          </svg>
+      </span>
+      <div class="hidden group-hover:block absolute pt-2 z-50" style="left: -24px;">
+          <ul class="py-2 border-none border-radius shadow-md dropdown-submenu rounded-md">
+                              <li class="hover:bg-whitesmoke m-0 relative">
+                      <a href="/" class="menu-dropdown-item px-4 py-2 block translation-menu" data-language="en">
+                          <span class="block whitespace-nowrap text-charcoal text-xs">English</span>
+                      </a>
+                  </li>
+                              <li class="hover:bg-whitesmoke m-0 relative">
+                      <a href="/fr" class="menu-dropdown-item px-4 py-2 block translation-menu" data-language="fr">
+                          <span class="block whitespace-nowrap text-charcoal text-xs">French</span>
+                      </a>
+                  </li>
+                      </ul>
+      </div>
+  </li>
+    <li id="SearchButton" tabindex="0" class="horizontal-flex text-charcoal search-button cursor-pointer hover:bg-whitesmoke rounded p-2 m-0" style="line-height:0">
+      <span class="n-icon n-icon-search"></span>
+    </li>
+  </ul>
+
+  <!-- Control the marketo modal -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="neo4j-main-menu-container" class="bg-white z-10 w-full top-0">
+      <div id="neo4j-main-menu" class="grid-container vertical-flex justify-center py-3">
+        <div class=" desktop-menu flex">
+          <div>
+            <a href="/" class="mr-8">
+              <img height="34px" width="104px" src="https://dist.neo4j.com/wp-content/uploads/20210423072428/neo4j-logo-2020-1.svg" alt="The Neo4j Graph Platform – The #1 Platform for Connected Data">
+            </a>
+          </div>
+          <div class="flex items-center w-full ml-4">
+            <div class="w-full h-full">
+
+  <style>
+    .desktop-menu ul li.group:focus-visible {
+      outline-style: solid;
+      outline-width: 2px;
+      border-radius: .125rem;
+    }
+
+    a[data-l="Pricing"] {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    a[data-l="Pricing"]:focus, a[data-l="Pricing"]:hover {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a[data-l="Contact Us"] {
+      padding: 0.5rem;
+    }
+
+    #n-pricing-menu {
+      flex: 1;
+    }
+
+    #n-contact-us-menu {
+      flex: 1;
+      justify-content: flex-end;
+    }
+  </style>
+
+  <ul class="items-center z-50 flex m-0 h-full">
+    <li id="n-products-menu" tabindex="0" class="group relative m-0 flex items-center self-stretch n-products-menu"><span class="text-charcoal hover:text-black px-4 text-sm font-normal cursor-default">Products</span>
+  <div class="hidden group-hover:block absolute top-full" style="top: 100%">
+    <ul class="py-4 border-none border-radius menu-dropdown-shadow bg-white text-left m-0 dropdown-submenu rounded-md">
+      <div class="flex flex-row gap-x-4">
+        <div class="flex flex-col w-full">
+          <div class="flex-1">
+                      <div class="flex flex-row mt-2">
+              <div>
+                <span class="px-8 pt-4 pb-2 text-overline text-sm text-primary block font-bold">Graph Database</span>
+
+  <li class="menu-item-wrapper ">
+    <a href="/product/neo4j-graph-database/" data-l="Neo4j Graph Database" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Neo4j Graph Database          </span>
+      <span class="menu-item-description">Self-managed, deploy anywhere</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+
+  <li class="menu-item-wrapper ">
+    <a href="/cloud/platform/aura-graph-database/" data-l="Neo4j AuraDB" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Neo4j AuraDB          </span>
+      <span class="menu-item-description">Fully managed graph database as a service</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+              </div>
+              <div>
+                <span class="px-8 pt-4 pb-2 text-overline text-sm text-primary block font-bold">Graph Data Science</span>
+
+
+  <li class="menu-item-wrapper ">
+    <a href="/product/graph-data-science/" data-l="Neo4j Graph Data Science" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Neo4j Graph Data Science          </span>
+      <span class="menu-item-description">Graph analytics and modeling platform</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+
+  <li class="menu-item-wrapper ">
+    <a href="/cloud/platform/aura-graph-data-science/" data-l="Neo4j AuraDS" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Neo4j AuraDS
+  <span class="text-primary font-normal text-xs border border-primary-50 border-solid rounded-full inline-block px-2 ml-2">
+    New!</span>          </span>
+      <span class="menu-item-description">Fully managed graph data science as a service</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+              </div>
+            </div>
+          </div>
+          <div class="px-8">
+            <hr>
+            <div class="flex gap-x-8 with-underline-anchors py-2">
+              <div class="grow" style="flex-basis: 100%">
+                <li class="menu-item-wrapper text-sm">
+                  <div class="font-bold">Download Center
+                  </div>
+                  <div class="font-normal menu-item-text-light">
+                    <a data-l="product download-center db" class="menu-dropdown-item-link menu-item-text-light" href="/download-center/">Graph
+                      Database</a> • <a data-l="product download-center ds" href="/graph-data-science-software/" class="menu-dropdown-item-link menu-item-text-light">Graph
+                      Data Science</a>
+                  </div>
+                </li>
+              </div>
+              <div class="grow" style="flex-basis: 100%">
+                <li class="menu-item-wrapper text-sm">
+                <div class="font-bold">Pricing</div>
+                  <div class="font-normal menu-item-text-light">
+                    <a data-l="product pricing db" href="/pricing/" class="menu-dropdown-item-link menu-item-text-light">Graph Database</a> • <a data-l="product pricing ds" href="/pricing/#graph-data-science" class="menu-dropdown-item-link menu-item-text-light">Graph Data
+                      Science</a>
+                  </div>
+                </li>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-whitesmoke mr-4 rounded-md py-2 menu-group-with-background" style="border-radius: 0 0.375rem 0.375rem 0; margin-right: 0; margin-top: -1rem; margin-bottom: -1rem;">
+          <span class="px-8 pt-4 pb-2 text-overline text-aluminum text-sm block">User Tools</span>
+
+  <li class="menu-item-wrapper ">
+    <a href="/product/developer-tools/" data-l="Neo4j Developer Tools" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Neo4j Developer Tools          </span>
+      <span class="menu-item-description">Desktop, Browser, and Data Importer</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+
+  <li class="menu-item-wrapper ">
+    <a href="/neo4j-ops-manager/" data-l="Neo4j Ops Manager" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Neo4j Ops Manager      <span style="background-color: #fff;" class="text-primary font-normal text-xs border border-primary-50 border-solid rounded-full inline-block px-2 ml-2">
+          New!</span>    </span>
+      <span class="menu-item-description">Centrally manage Neo4j databases</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+
+  <li class="menu-item-wrapper ">
+    <a href="/product/cypher-graph-query-language/" data-l="Cypher Query Language" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Cypher Query Language          </span>
+      <span class="menu-item-description">Powerful, intuitive, and graph-optimized</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+
+  <li class="menu-item-wrapper ">
+    <a href="/product/graphql-library/" data-l="Neo4j GraphQL Library" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Neo4j GraphQL Library          </span>
+      <span class="menu-item-description">Low-code, open source API library</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+
+  <li class="menu-item-wrapper ">
+    <a href="/product/connectors/" data-l="Neo4j Data Connectors" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Neo4j Data Connectors          </span>
+      <span class="menu-item-description">Apache Kafka, Apache Spark, and BI tools</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+
+  <li class="menu-item-wrapper ">
+    <a href="/product/bloom/" data-l="Neo4j Bloom" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Neo4j Bloom          </span>
+      <span class="menu-item-description">Easy graph visualization and exploration</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+        </div>
+      </div>
+    </ul>
+  </div>
+  </li><li id="n-solutions-menu" tabindex="0" class="group relative m-0 flex items-center self-stretch n-solutions-menu"><span class="text-charcoal hover:text-black px-4 text-sm font-normal cursor-default">Solutions</span>
+  <div class="get-started-button-dropdown hidden group-hover:block absolute top-full" style="top: 100%">
+    <ul class="py-4 border-none border-radius menu-dropdown-shadow bg-white text-left m-0 dropdown-submenu rounded-md">
+
+  <li class="menu-item-wrapper  group-flyout" tabindex="0">
+    <a href="/use-cases/" data-l="Use Cases" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Use Cases          </span>
+      <span class="menu-item-description">Fraud detection, knowledge graphs and more</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+    <!-- <div class="n-icon n-icon-chevron-right" style="height: 10px; width: 10px; position: absolute; right: 1rem; top: calc(50% - 8px);"></div> -->
+  <div class="flyout hidden absolute pt-0 z-50 top-full" style="left: 100%; top: 0; width: max-content;">
+    <div class="py-4 m-0 border-none border-radius rounded-tl-none menu-dropdown-shadow bg-white text-left rounded-md">
+      <div class="menu-dropdown-item relative">
+    <span class="menu-item-title">Knowledge Graphs</span>
+    <span class="menu-item-description whitespace-pre-line">Knowledge graphs are the force multiplier of smart data
+      management and analytics use cases.</span>
+    <a data-l="knowledge graphs" href="/use-cases/knowledge-graph/" class="block arrowed full-clickable mt-2" id="knowledge-graphs-menu-link">Learn More</a>
+  </div>
+      <hr>
+          <div class="flex">
+              <div style="max-width: 18rem; flex-basis:50%;">
+                  <div class="pt-3 pb-1 px-8 font-bold text-primary text-overline">By Application</div>
+
+
+          <div class="m-0 relative">
+            <a href="/use-cases/graph-data-science-artificial-intelligence/" data-l="Analytics and Data Science" class="menu-dropdown-item flyout-menu-dropdown-item">
+              Analytics and Data Science          </a>
+          </div>
+
+
+          <div class="m-0 relative">
+            <a href="/use-cases/fraud-detection/" data-l="Fraud Detection" class="menu-dropdown-item flyout-menu-dropdown-item">
+              Fraud Detection          </a>
+          </div>
+
+
+          <div class="m-0 relative">
+            <a href="/use-cases/knowledge-graph/" data-l="Knowledge Graphs" class="menu-dropdown-item flyout-menu-dropdown-item">
+              Knowledge Graphs          </a>
+          </div>
+
+
+          <div class="m-0 relative">
+            <a href="/use-cases/real-time-recommendation-engine/" data-l="Real Time Recommendations" class="menu-dropdown-item flyout-menu-dropdown-item">
+              Real Time Recommendations          </a>
+          </div>
+
+
+          <div class="m-0 relative">
+            <a href="/use-cases/supply-chain-management/" data-l="Supply Chain Management" class="menu-dropdown-item flyout-menu-dropdown-item">
+              Supply Chain Management          </a>
+          </div>
+
+
+          <div class="m-0 relative">
+            <a href="/use-cases/identity-and-access-management/" data-l="Identity and Access Management" class="menu-dropdown-item flyout-menu-dropdown-item">
+              Identity and Access Management          </a>
+          </div>
+
+
+          <div class="m-0 relative">
+            <a href="/use-cases/master-data-management/" data-l="Master Data Management" class="menu-dropdown-item flyout-menu-dropdown-item">
+              Master Data Management          </a>
+          </div>
+
+
+          <div class="m-0 relative">
+            <a href="/use-cases/network-and-it-operations/" data-l="Network and IT Operations" class="menu-dropdown-item flyout-menu-dropdown-item">
+              Network and IT Operations          </a>
+          </div>
+
+
+          <div class="m-0 relative">
+            <a href="/use-cases/privacy-risk-compliance/" data-l="Data Privacy, Risk and Compliance" class="menu-dropdown-item flyout-menu-dropdown-item">
+              Data Privacy, Risk and Compliance          </a>
+          </div>
+
+
+          <div class="m-0 relative">
+            <a href="/use-cases/social-network/" data-l="Social Networking" class="menu-dropdown-item flyout-menu-dropdown-item">
+              Social Networking          </a>
+          </div>
+
+
+        </div>
+              <div style="max-width: 18rem; flex-basis:50%;">
+                  <div class="pt-3 pb-1 px-8 font-bold text-primary text-overline">By Industry</div>
+
+
+          <div class="m-0 relative">
+            <a href="/use-cases/financial-services/" data-l="Financial Services" class="menu-dropdown-item flyout-menu-dropdown-item">
+              Financial Services          </a>
+          </div>
+
+
+          <div class="m-0 relative">
+            <a href="/use-cases/retail/" data-l="Retail" class="menu-dropdown-item flyout-menu-dropdown-item">
+              Retail          </a>
+          </div>
+
+
+          <div class="m-0 relative">
+            <a href="/use-cases/life-sciences/" data-l="Life Sciences" class="menu-dropdown-item flyout-menu-dropdown-item">
+              Life Sciences          </a>
+          </div>
+
+
+          <div class="m-0 relative">
+            <a href="/use-cases/telecom/" data-l="Telecommunications" class="menu-dropdown-item flyout-menu-dropdown-item">
+              Telecommunications          </a>
+          </div>
+
+
+          <div class="m-0 relative">
+            <a href="/use-cases/government/" data-l="Government" class="menu-dropdown-item flyout-menu-dropdown-item">
+              Government          </a>
+          </div>
+
+
+        </div>
+            </div>
+    </div>
+  </div>
+  </li>
+  <li class="menu-item-wrapper ">
+    <a href="/case-studies/" data-l="Case Studies" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Case Studies          </span>
+      <span class="menu-item-description">In-depth looks at customer success stories</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+  <li class="menu-item-wrapper ">
+    <a href="/customers/" data-l="Customers" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Customers          </span>
+      <span class="menu-item-description">Companies, governments and NGOs using Neo4j</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+  <li class="menu-item-wrapper ">
+    <a href="/professional-services/" data-l="Professional Services" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Professional Services          </span>
+      <span class="menu-item-description">The world’s best graph database consultants</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>      </ul>
+  </div></li><li id="n-learn-menu" tabindex="0" class="group relative m-0 flex items-center self-stretch n-learn-menu"><span class="text-charcoal hover:text-black px-4 text-sm font-normal cursor-default">Learn</span>
+  <div class="hidden group-hover:block absolute z-50 top-full" style="top:100%">
+    <ul class="py-4 border-none border-radius menu-dropdown-shadow bg-white text-left m-0 dropdown-submenu flex rounded-md">
+          <div>
+        <span class="px-8 pt-4 pb-2 text-overline text-sm text-primary block font-bold">Resources</span>
+
+  <li class="menu-item-wrapper ">
+    <a href="/who-uses-neo4j/" data-l="Who Uses Neo4j?" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Who Uses Neo4j?          </span>
+      <span class="menu-item-description">75 percent of Fortune 100 companies</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+  <li class="menu-item-wrapper ">
+    <a href="/graph-database-executive-insights/" data-l="Executive Insights" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Executive Insights          </span>
+      <span class="menu-item-description">Get to Know Graph Technology</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+  <li class="menu-item-wrapper ">
+    <a href="https://graphacademy.neo4j.com/" data-l="GraphAcademy" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        GraphAcademy          </span>
+      <span class="menu-item-description">Free online courses and certifications</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+  <li class="menu-item-wrapper ">
+    <a href="/blog/" data-l="Neo4j Blog" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Neo4j Blog          </span>
+      <span class="menu-item-description">Daily reads on general Neo4j topics</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+  <li class="menu-item-wrapper ">
+    <a href="/videos/" data-l="Videos" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Videos          </span>
+      <span class="menu-item-description">Up-to-date, searchable archive</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+  <li class="menu-item-wrapper ">
+    <a href="/books/" data-l="Books" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Books          </span>
+      <span class="menu-item-description">Learn in depth with books</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+  <li class="menu-item-wrapper ">
+    <a href="/resources/" data-l="Resource Library" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Resource Library          </span>
+      <span class="menu-item-description">White papers, data sheets and more</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>          </div>
+
+          <div>
+        <span class="px-8 pt-4 pb-2 text-overline text-sm text-primary block font-bold">Events</span>
+
+  <li class="menu-item-wrapper ">
+    <a href="/graphsummit/" data-l="GraphSummit" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        GraphSummit          </span>
+      <span class="menu-item-description">Live events around the world</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+  <li class="menu-item-wrapper ">
+    <a href="/connections/" data-l="Connections" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Connections          </span>
+      <span class="menu-item-description">Our ongoing digital event series</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+  <li class="menu-item-wrapper ">
+    <a href="/events/" data-l="Events Calendar" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Events Calendar          </span>
+      <span class="menu-item-description">Live online events, trainings and demos</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+  <li class="menu-item-wrapper ">
+    <a href="/live-demos/" data-l="Live Demos" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Live Demos          </span>
+      <span class="menu-item-description">Weekly demos with Neo4j experts</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+  <li class="menu-item-wrapper ">
+    <a href="/webinars/" data-l="Webinars" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Webinars          </span>
+      <span class="menu-item-description">Upcoming live and on-demand webinars</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>          </div>
+
+        </ul>
+  </div></li><li id="n-developers-menu" tabindex="0" class="group relative m-0 flex items-center self-stretch n-developers-menu"><span class="text-charcoal hover:text-black px-4 text-sm font-normal cursor-default">Developers</span>
+  <div class="get-started-button-dropdown hidden group-hover:block absolute top-full" style="top: 100%">
+    <ul class="py-4 border-none border-radius menu-dropdown-shadow bg-white text-left m-0 dropdown-submenu rounded-md">
+
+  <li class="menu-item-wrapper ">
+    <a href="/developer/" data-l="Developer Home" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Developer Home          </span>
+      <span class="menu-item-description">Best practices, how-to guides and tutorials</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+  <li class="menu-item-wrapper ">
+    <a href="/docs/" data-l="Documentation" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Documentation          </span>
+      <span class="menu-item-description">Manuals for Neo4j products, Cypher and drivers</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+  <li class="menu-item-wrapper ">
+    <a href="/download-center/" data-l="Download Center" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Download Center          </span>
+      <span class="menu-item-description">Get Neo4j products, tools and integrations</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+  <li class="menu-item-wrapper ">
+    <a href="/developer-blog/" data-l="Developer Blog" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Developer Blog          </span>
+      <span class="menu-item-description">Deep dives into more technical Neo4j topics</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+  <li class="menu-item-wrapper ">
+    <a href="https://community.neo4j.com/" data-l="Community" target="_blank" rel="noopener" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Community          </span>
+      <span class="menu-item-description">A global forum for online discussion</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+  <li class="menu-item-wrapper ">
+    <a href="/developer/online-meetup/" data-l="Virtual Events" target="_blank" rel="noopener" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Virtual Events          </span>
+      <span class="menu-item-description">Global developer conferences and workshops</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>      </ul>
+  </div></li><li id="n-data-scientists-menu" tabindex="0" class="group relative m-0 flex items-center self-stretch n-data-scientists-menu"><span class="text-charcoal hover:text-black px-4 text-sm font-normal cursor-default">Data Scientists</span>
+  <div class="get-started-button-dropdown hidden group-hover:block absolute top-full" style="top: 100%">
+    <ul class="py-4 border-none border-radius menu-dropdown-shadow bg-white text-left m-0 dropdown-submenu rounded-md">
+
+  <li class="menu-item-wrapper ">
+    <a href="/product/graph-data-science/" data-l="Graph Data Science Home" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Graph Data Science Home          </span>
+      <span class="menu-item-description">Learn what Neo4j offers for data science</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+  <li class="menu-item-wrapper ">
+    <a href="/docs/graph-data-science/current/" data-l="Data Science Documentation" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Data Science Documentation          </span>
+      <span class="menu-item-description">Manual for the Graph Data Science library</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+  <li class="menu-item-wrapper ">
+    <a href="https://graphacademy.neo4j.com/categories/data-scientist/" data-l="GraphAcademy for Data Science" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        GraphAcademy for Data Science          </span>
+      <span class="menu-item-description">Free online courses and certifications for data scientists</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+  <li class="menu-item-wrapper ">
+    <a href="/developer/graph-data-science/" data-l="Data Science Guides" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Data Science Guides          </span>
+      <span class="menu-item-description">Deep dives &amp; how-tos on more technical topics</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+  <li class="menu-item-wrapper ">
+    <a href="https://community.neo4j.com/c/neo4j-graph-platform/graph-algorithms/73" data-l="Data Science Community" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Data Science Community          </span>
+      <span class="menu-item-description">A global forum for online discussion</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>
+  <li class="menu-item-wrapper ">
+    <a href="/graph-data-science-software/" data-l="Get Started with Graph Data Science" class="menu-dropdown-item">
+      <span class="menu-item-title">
+        Get Started with Graph Data Science          </span>
+      <span class="menu-item-description">Download our software or get started in Sandbox today!</span>
+    </a>
+    <!-- Maybe flyout submenu -->
+
+  </li>      </ul>
+  </div></li><li id="n-pricing-menu" tabindex="0" class="group relative m-0 flex items-center self-stretch n-pricing-menu"><a data-l="Pricing" href="/pricing" class="text-charcoal hover:text-black p-4 text-sm font-normal cursor-pointer">Pricing</a></li><li id="n-contact-us-menu" tabindex="0" class="group relative m-0 flex items-center self-stretch n-contact-us-menu"><a data-l="Contact Us" href="/contact-us/" class="text-charcoal hover:text-black p-4 text-sm font-normal cursor-pointer">Contact Us</a></li><li id="n-get-started-menu" tabindex="0" class="group relative m-0 flex items-center self-stretch n-get-started-menu"><a data-l="Get Started" href="/cloud/platform/aura-graph-database/?ref=nav-get-started-cta" class="text-charcoal hover:text-black p-4 text-sm font-normal cursor-pointer vwo_loaded vwo_loaded_78">Signup</a></li>
+  </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

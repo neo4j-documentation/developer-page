@@ -1,0 +1,122 @@
+---
+import { getLatest } from "./feed/get-feed";
+import Item from "./feed/item.astro";
+
+const latest = await getLatest();
+---
+
+<section id="resources">
+  <div class="grid-container">
+    <div class="grid-x">
+      <div class="cell large-2">
+        <h2>Featured Resources</h2>
+      </div>
+      <div class="cell large-9 large-offset-1">
+        <div class="grid-container">
+          <div class="grid-x grid-margin-x grid-margin-y">
+            <div class="cell large-4 medium-4">
+              <a href="/data-science-sandbox/" target="_blank">
+                <div class="card card-minimal-style pt-8 px-6">
+                  <img
+                    style="max-width: 42px;"
+                    src="https://dist.neo4j.com/wp-content/uploads/20221101082037/gdb-icon-browser-screen.svg"
+                    alt=""
+                  />
+                  <p class="text-overline mt-4">SANDBOX</p>
+                  <p class="font-bold mt-2">
+                    Test Drive Neo4j Graph Data Science
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="cell large-4 medium-4">
+              <a
+                href="/whitepapers/graph-data-science-use-case-selection-guide/"
+                target="_blank"
+              >
+                <div class="card card-minimal-style pt-8 px-6">
+                  <img
+                    style="max-width: 42px;"
+                    src="https://dist.neo4j.com/wp-content/uploads/20221101082028/gdb-icon-user-network.svg"
+                    alt=""
+                  />
+                  <p class="text-overline mt-4">CASE</p>
+                  <p class="font-bold mt-2">
+                    Explore the Use Case Selection Guide
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="cell large-4 medium-4">
+              <a
+                href="https://go.neo4j.com/rs/710-RRC-335/images/Graph-Algorithms-Infographic.pdf"
+                target="_blank"
+              >
+                <div class="card card-minimal-style pt-8 px-6">
+                  <img
+                    style="max-width: 42px;"
+                    src="https://dist.neo4j.com/wp-content/uploads/20221101082027/gdb-icon-hierarchy.svg"
+                    alt=""
+                  />
+                  <p class="text-overline mt-4">INFOGRAPHIC</p>
+                  <p class="font-bold mt-2">See available graph algorithms</p>
+                </div>
+              </a>
+            </div>
+            <div class="cell large-4 medium-4">
+              <a
+                href="/whitepapers/graph-embeddings-whitepaper/"
+                target="_blank"
+              >
+                <div class="card card-minimal-style pt-8 px-6">
+                  <img
+                    style="max-width: 42px;"
+                    src="https://dist.neo4j.com/wp-content/uploads/20221101082030/paper-text-3.svg"
+                    alt=""
+                  />
+                  <p class="text-overline mt-4">White Paper</p>
+                  <p class="font-bold mt-2">
+                    Graph Embeddings: AI That Learns From Your Data
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="cell large-4 medium-4">
+              <a
+                href="/whitepapers/identify-important-unusual-next-big-questions-graph-algorithms/"
+                target="_blank"
+              >
+                <div class="card card-minimal-style pt-8 px-6">
+                  <img
+                    style="max-width: 42px;"
+                    src="https://dist.neo4j.com/wp-content/uploads/20221101082026/gdb-icon-monitor-download.svg"
+                    alt=""
+                  />
+                  <p class="text-overline mt-4">EBOOK</p>
+                  <p class="font-bold mt-2">
+                    Graph Algorithms: Answering the Big Questions
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="cell large-4 medium-4">
+              <a href="/graphacademy/neo4j-gds-certify/" target="_blank">
+                <div class="card card-minimal-style pt-8 px-6">
+                  <img
+                    style="max-width: 42px;"
+                    src="https://dist.neo4j.com/wp-content/uploads/20220315165554/learning-monitor-1.svg"
+                    alt=""
+                  />
+                  <p class="text-overline mt-4">GRAPHACADEMY</p>
+                  <p class="font-bold mt-2">
+                    Free Training and Certification for Data Scientists
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

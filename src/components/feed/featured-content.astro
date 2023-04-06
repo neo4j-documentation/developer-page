@@ -1,0 +1,21 @@
+---
+import { getLatest } from "./get-feed";
+import Item from "./item.astro";
+
+const latest = await getLatest(8);
+---
+
+<!-- <section class="bg-neutral-20"> -->
+<section class="bg-neutral-10">
+  <div class="grid-container">
+    <div class="section-header text-center">
+      <h5 class="text-overline-lg">Developer Resources</h5>
+      <h3 class="section-title">Featured Content</h3>
+      <p>Keep up to date with the latest releases from the Neo4j</p>
+    </div>
+
+    <div class="grid-x grid-padding-x-lg gap-y-12">
+      {latest.map((item) => <Item {...item} />)}
+    </div>
+  </div>
+</section>

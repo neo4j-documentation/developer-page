@@ -1,0 +1,22 @@
+---
+const { title } = Astro.props;
+---
+
+<section id="why-neo4j" class="pb-0">
+  <div class="grid-container">
+    <div class="grid-x">
+      <div
+        class="cell small-12 medium-10 large-8 medium-offset-1 large-offset-2"
+      >
+        <div class="section-header md:text-center">
+          <h2 class="section-title m-auto" style="max-width: 620px;">
+            {title}
+          </h2>
+          <div class="section-subtitle">
+            <slot />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
