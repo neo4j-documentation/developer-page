@@ -1,5 +1,6 @@
 ---
 import Central from "./content/central.astro";
+import Start from "./start.astro";
 
 const usecases = [
   {
@@ -32,39 +33,52 @@ const usecases = [
 <Central title="Graphs Are Everywhere">
   <p>
     Nodes and Relationships provide the building blocks for a fast, flexible
-    data store. Take a look at some of the common use cases below for
-    inspiration.
+    data store. Take a look at some of the <a
+      href="https://neo4j.com/use-cases/">common graph use cases</a
+    > below for inspiration.
   </p>
 </Central>
 
 <div class="grid-container">
   <div class="grid-x small-up-1 grid-padding-x-lg grid-padding-y-xl">
     <div class="cell">
-      <div class="p-12 rounded-md">
-        <div class="grid-x grid-padding-x">
-          {
-            usecases.map((usecase) => (
-              <div class="cell small-12 medium-12 large-4">
-                <div class="card card-hover-animation bg-transparent border-0 card-full-clickable" />
-                <div class="mb-8" style="height: 64px">
-                  <img
-                    src={usecase.image}
-                    alt={usecase.title}
-                    style="height: 56px"
-                  />
-                </div>
-                <h3 class="h6 card-title m-0">{usecase.title}</h3>
-                <p style="height: 148px;">{usecase.description}</p>
-                <div class="card-cta">
-                  <a class="arrowed" href={usecase.link}>
-                    Read More
-                  </a>
-                </div>
+      <!-- <div class="p-12 pt-0 rounded-md"> -->
+      <div class="grid-x grid-padding-x pt-0">
+        {
+          usecases.map((usecase) => (
+            <div class="usecase cell small-12 medium-12 large-4  mb-8">
+              <div class="card card-hover-animation bg-transparent border-0 card-full-clickable" />
+              <div class="mb-8 use-case-image">
+                <img
+                  src={usecase.image}
+                  alt={usecase.title}
+                  style="height: 56px"
+                />
               </div>
-            ))
-          }
-        </div>
+              <h3 class="h6 card-title m-0">{usecase.title}</h3>
+              <p class="use-case-desc">{usecase.description}</p>
+              <div class="card-cta">
+                <a class="arrowed" href={usecase.link}>
+                  Read More
+                </a>
+              </div>
+            </div>
+          ))
+        }
       </div>
+      <!-- </div> -->
     </div>
   </div>
+  <Start />
 </div>
+
+<style is:global>
+  @media all and (min-width: 1030px) {
+    .use-case-image {
+      height: 64px;
+    }
+    .use-case-desc {
+      height: 148px;
+    }
+  }
+</style>

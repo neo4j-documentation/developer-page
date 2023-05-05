@@ -43,7 +43,7 @@ export default function InteractiveCypher() {
                         <div className="grid-x items-center grid-padding-x-xl">
                             <div className="cell small-12 large-6 mb-8">
                                 <div>
-                                    <h3 className="mb-8">The Cypher Query Language</h3>
+                                    <h3 className="mb-8">Introducing Cypher</h3>
                                     <p className="section-subtitle mb-8">
                                         Cypher is a declarative open query language that allows for expressive and
                                         efficient queries in a property graph. Originally built by Neo4j, Cypher is

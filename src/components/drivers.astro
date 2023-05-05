@@ -1,46 +1,83 @@
 ---
+import Javascript from "./languages/javascript.astro";
+import Python from "./languages/python.astro";
+import Go from "./languages/go.astro";
+import Dotnet from "./languages/dotnet.astro";
+import Java from "./languages/java.astro";
+
 const languages = [
   {
     name: "JavaScript",
-    image:
-      "https://dist.neo4j.com/wp-content/uploads/20220228142717/Node.JS.svg",
+    logo: Javascript,
     links: [
-      { url: "#", text: "Building Neo4j Applications with Node.js" },
-      { url: "#", text: "Building Neo4j Applications with TypeScript" },
-      { url: "#", text: "Neo4j JavaScript Driver Manual" },
+      {
+        url: "https://neo4j.com/docs/javascript-manual/current/",
+        text: "Neo4j JavaScript Driver Manual",
+      },
+      {
+        url: "https://graphacademy.neo4j.com/courses/app-nodejs/?ref=developer",
+        text: "Building Neo4j Applications with Node.js",
+      },
+      {
+        url: "https://graphacademy.neo4j.com/courses/app-typescript/",
+        text: "Building Neo4j Applications with TypeScript",
+      },
     ],
   },
   {
     name: "Python",
-    image:
-      "https://dist.neo4j.com/wp-content/uploads/20220228142718/Python.svg",
+    logo: Python,
     links: [
-      { url: "#", text: "Building Neo4j Applications with Python" },
-      { url: "#", text: "Neo4j Python Driver Manual" },
+      {
+        url: "https://neo4j.com/docs/python-manual/current/",
+        text: "Neo4j Python Driver Manual",
+      },
+      {
+        url: "https://graphacademy.neo4j.com/courses/app-python/?ref=developer",
+        text: "Building Neo4j Applications with Python",
+      },
     ],
   },
   {
     name: "Go",
-    image: "https://dist.neo4j.com/wp-content/uploads/20220228142715/Go.svg",
+    logo: Go,
     links: [
-      { url: "#", text: "Building Neo4j Applications with Go" },
-      { url: "#", text: "Neo4j Go Driver Manual" },
+      {
+        url: "https://neo4j.com/docs/go-manual/current/",
+        text: "Neo4j Go Driver Manual",
+      },
+      {
+        url: "https://graphacademy.neo4j.com/courses/app-go/?ref=developer",
+        text: "Building Neo4j Applications with Go",
+      },
     ],
   },
   {
     name: ".NET",
-    image: "https://dist.neo4j.com/wp-content/uploads/20220228143043/NET.svg",
+    logo: Dotnet,
     links: [
-      { url: "#", text: "Building Neo4j Applications with .NET" },
-      { url: "#", text: "Neo4j .NET Driver Manual" },
+      {
+        url: "https://neo4j.com/docs/dotnet-manual/current/",
+        text: "Neo4j .NET Driver Manual",
+      },
+      {
+        url: "https://graphacademy.neo4j.com/courses/app-dotnet/?ref=developer",
+        text: "Building Neo4j Applications with .NET",
+      },
     ],
   },
   {
     name: "Java",
-    image: "https://dist.neo4j.com/wp-content/uploads/20220228142716/Java.svg",
+    logo: Java,
     links: [
-      { url: "#", text: "Building Neo4j Applications with Java" },
-      { url: "#", text: "Neo4j Java Driver Manual" },
+      {
+        url: "https://neo4j.com/docs/java-manual/current/",
+        text: "Neo4j Java Driver Manual",
+      },
+      {
+        url: "https://graphacademy.neo4j.com/courses/app-java/?ref=developer",
+        text: "Building Neo4j Applications with Java",
+      },
     ],
   },
 ];
@@ -61,14 +98,13 @@ const languages = [
     <div class="grid-x grid-margin-x grid-margin-y pt-12 align-center">
       {
         languages.map((language) => (
-          <div class="cell medium-2 medium-auto">
-            <div class="language border rounded-md px-4 py-12 mb-8">
-              <a href={language.links[0].url} class="block pb-4">
-                <img
-                  src={language.image}
-                  alt={language.name}
-                  style="height: 78px"
-                />
+          <div class="cell medium-2 medium-auto align-center">
+            <div class="language border rounded-md">
+              <a href={language.links[0].url} class="block  px-4 py-6 ">
+                <div class="logo">
+                  <language.logo class="block" />
+                </div>
+                {language.name}
               </a>
             </div>
           </div>
@@ -78,8 +114,22 @@ const languages = [
   </div>
 </section>
 
-<style>
+<style is:global>
   .language {
     border-color: rgb(229, 231, 235);
+    text-align: center;
+  }
+  .language a:hover {
+    text-decoration: none;
+  }
+  .language .logo {
+    height: 64px;
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+  }
+  .language svg {
+    display: block;
+    margin: auto;
   }
 </style>

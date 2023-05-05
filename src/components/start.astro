@@ -1,0 +1,50 @@
+---
+const options = [
+  {
+    title: "Unsure where to start?",
+    description:
+      "Launch a temporary Neo4j Sandbox instance with a pre-populated dataset and follow the guide to explore the data.",
+    link: "https://neo4j.com/sandbox/",
+    action: 'Launch a Sandbox'
+  },
+  {
+    title: "Have your own data?",
+    description:
+      "Create a free AuraDB instance and use Neo4j tools to import and query your data.  Free forever, no credit card.",
+    link: "https://neo4j.com/aura/",
+    action: 'Create your free AuraDB Instance'
+  },
+];
+---
+
+<div id="four-col">
+  <div class="grid-x grid-margin-x grid-margin-y">
+    {
+      options.map((option) => (
+        <div class="cell medium-6 card-hover-animation border rounded-md mb-8 p-8 bg-white">
+          <a href={option.link}>
+            <!-- <img
+              class="mb-4"
+              src="https://dist.neo4j.com/wp-content/uploads/20220223152608/laptop-book-2.svg"
+              alt=""
+            /> -->
+            <p>
+              <b>{option.title}</b>
+            </p>
+            <p>{option.description}</p>
+          </a>
+          <a href={option.link} class="arrowed">{option.action}</a>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+    #four-col {
+        margin-bottom: 4rem;
+    }
+    #four-col .cell {
+        border-color: #e5e7eb;
+    }
+</style>

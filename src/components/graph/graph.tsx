@@ -12,11 +12,6 @@ interface GraphProps {
 }
 
 export default function Graph({ nevada, nodes, rels }: GraphProps) {
-
-
-
-  console.log('render')
-
   return (<div className='graph-canvas' style={{
     paddingLeft: '40%',
     height: '100%'
