@@ -1,0 +1,50 @@
+---
+import { FeedItemType } from "./get-feed";
+const { published, url, title, type, image, description, author } = Astro.props;
+
+let cta = "Read";
+let icon =
+  "https://dist.neo4j.com/wp-content/uploads/20221101082030/paper-text-3.svg";
+
+switch (type) {
+  case FeedItemType.LiveStream:
+    cta = "Watch";
+    icon =
+      "https://dist.neo4j.com/wp-content/uploads/20221101082037/gdb-icon-browser-screen.svg";
+    break;
+
+  case FeedItemType.Video:
+    cta = "Watch";
+    icon =
+      "https://dist.neo4j.com/wp-content/uploads/20221101082027/gdb-icon-hierarchy.svg";
+    break;
+
+  case FeedItemType.Podcast:
+    cta = "Listen";
+    icon =
+      "https://dist.neo4j.com/wp-content/uploads/20221101082028/gdb-icon-user-network.svg";
+    break;
+}
+---
+
+<div class="cell small-12 medium-6 large-3">
+  <div
+    class="card card-hover-animation bg-transparent border-0 card-full-clickable"
+  >
+    <img style="max-width: 42px;" src={icon} alt={title} />
+    <p class="text-overline mt-8">{type}</p>
+    <div class="h6 card-title m-0">{title}</div>
+    <p>
+      {
+        new Intl.DateTimeFormat("en-US", {
+          day: "numeric",
+          month: "long",
+          year: "numeric",
+        }).format(published)
+      }
+    </p>
+    <div class="card-cta">
+      <a class="arrowed" target="_blank" href={url}>{cta}</a>
+    </div>
+  </div>
+</div>

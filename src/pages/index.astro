@@ -3,7 +3,8 @@ import "../../assets/customer-cards.css";
 
 import Header from "../components/header.astro";
 import Footer from "../components/footer.astro";
-import Hero from "../components/hero.astro";
+import Hero from "../components/hero.tsx";
+import Cypher from "../components/cypher.astro";
 import UseCases from "../components/use-cases.astro";
 import Drivers from "../components/drivers.astro";
 import FeaturedContent from "../components/feed/featured-content.astro";
@@ -34,8 +35,9 @@ import Cta from "../components/cta.astro";
   </head>
   <body>
     <Header />
-    <Hero />
+    <Hero client:only="react" />
     <UseCases />
+    <Cypher />
     <Drivers />
     <Community />
     <FeaturedContent />

@@ -2,9 +2,16 @@ import { XMLParser } from 'fast-xml-parser'
 
 export enum FeedItemType {
     Blog = "Developer Blog",
-    Podcast = "Podcast",
-    Video = "Video",
-    LiveStream = "Live Stream",
+    Podcast = "Podcasts",
+    Video = "Videos",
+    LiveStream = "Live Streams",
+}
+
+interface Feed {
+    type: FeedItemType;
+    icon: string;
+    cta: string;
+    items: FeedItem[]
 }
 
 export interface FeedItem {
@@ -17,26 +24,59 @@ export interface FeedItem {
     author: { name: string; url?: string; };
 }
 
+function getIcon(type: FeedItemType): string {
+    switch (type) {
+        case FeedItemType.LiveStream:
+            return "https://dist.neo4j.com/wp-content/uploads/20221101082037/gdb-icon-browser-screen.svg";
 
-async function getRssFeed(type: FeedItemType, url: string, defaultItem: Record<string, any> = {}): Promise<FeedItem[]> {
+        case FeedItemType.Video:
+            return "https://dist.neo4j.com/wp-content/uploads/20221101082027/gdb-icon-hierarchy.svg";
+
+        case FeedItemType.Podcast:
+            return "https://dist.neo4j.com/wp-content/uploads/20221101082028/gdb-icon-user-network.svg";
+
+        default:
+            return "https://dist.neo4j.com/wp-content/uploads/20221101082030/paper-text-3.svg";
+    }
+}
+
+function getCTA(type: FeedItemType) {
+    switch (type) {
+        case FeedItemType.LiveStream:
+            return "Watch";
+
+        case FeedItemType.Video:
+            return "Watch";
+
+        case FeedItemType.Podcast:
+            return "Listen";
+
+        default:
+            return "Read"
+    }
+}
+
+
+async function getRssFeed(type: FeedItemType, url: string, defaultItem: Partial<FeedItem> = {}, imageFactory: (item: Record<string, any>, feed: Record<string, any>) => string | undefined = () => undefined): Promise<FeedItem[]> {
     const res = await fetch(url)
     const text = await res.text();
 
     const parser = new XMLParser()
     const xml = parser.parse(text)
 
+    return xml.rss.channel.item.map((item: Record<string, any>) => {
+        const output = {
+            ...defaultItem,
+            type,
+            published: new Date(item.pubDate),
+            url: item.link,
+            title: item.title,
+            image: '',
+            description: item['itunes:summary'],
+        }
 
-
-    return xml.rss.channel.item.map((item: Record<string, any>) => ({
-        ...defaultItem,
-        type,
-        published: new Date(item.pubDate),
-        url: item.link,
-        title: item.title,
-        image: '',
-        description: item['itunes:summary'],
-        // author: { name: ''; url?: ''; },
-    }))
+        return { ...output, image: imageFactory(item, xml.rss.channel) }
+    })
 }
 
 async function getYoutubeFeed(type: FeedItemType, params: Record<string, any>): Promise<FeedItem[]> {
@@ -67,6 +107,41 @@ async function getYoutubeFeed(type: FeedItemType, params: Record<string, any>): 
     });
 }
 
+function formatFeed(type: FeedItemType, items: FeedItem[]): Feed {
+    return {
+        type,
+        icon: getIcon(type),
+        cta: getCTA(type),
+        items,
+    }
+}
+
+export async function getAllFeeds(limit = 4): Promise<Feed[]> {
+    const youtube = await getYoutubeFeed(FeedItemType.Video, { channel_id: 'UCvze3hU6OZBkB1vkhH2lH9Q' })
+    const liveStreams = await getYoutubeFeed(FeedItemType.LiveStream, { playlist_id: 'PL9Hl4pk2FsvW1NtrhILyptfFnLMjg5Vmc' })
+    const blog = await getRssFeed(FeedItemType.Blog, 'https://neo4j.com/developer-blog/feed/', {
+        author: {
+            name: 'Neo4j Developer Blog',
+            url: 'https://neo4j.com/blog',
+        }
+    }, (item => {
+        const parts = item.description?.match(/src="(.*)" class="attachment-large size-large wp-post-image"/)
+        return parts ? parts[1] : ''
+    }))
+    const podcast = await getRssFeed(FeedItemType.Podcast, 'https://feeds.simplecast.com/RIcqOK_t', {
+        author: {
+            name: 'GraphStuff.FM',
+            url: 'https://graphstuff.fm',
+        }
+    }, (item, feed) => feed.image.url)
+
+    return [
+        formatFeed(FeedItemType.Blog, blog.slice(0, limit)),
+        formatFeed(FeedItemType.LiveStream, liveStreams.slice(0, limit)),
+        formatFeed(FeedItemType.Podcast, podcast.slice(0, limit)),
+        formatFeed(FeedItemType.Video, youtube.slice(0, limit)),
+    ]
+}
 
 
 export async function getLatest(limit = 6): Promise<FeedItem[]> {

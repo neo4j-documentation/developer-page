@@ -1,8 +1,11 @@
 ---
-import { getLatest } from "./get-feed";
+import { getLatest, getAllFeeds } from "./get-feed";
 import Item from "./item.astro";
+import Column from "./item.astro";
 
-const latest = await getLatest(8);
+// const latest = await getLatest(8);
+
+const all = await getAllFeeds(3);
 ---
 
 <!-- <section class="bg-neutral-20"> -->
@@ -15,7 +18,22 @@ const latest = await getLatest(8);
     </div>
 
     <div class="grid-x grid-padding-x-lg gap-y-12">
-      {latest.map((item) => <Item {...item} />)}
+      {
+        all.map(({ type, icon, cta, items }) => (
+          <div class="cell small-12 medium-6 large-3">
+            <img src={icon} alt={type} />
+            <h5 class="mt-4 mb-8">{type}</h5>
+
+            {items.map((item) => (
+              <Item {...item} cta={cta} />
+            ))}
+          </div>
+        ))
+      }
     </div>
+
+    <!-- <div class="grid-x grid-padding-x-lg gap-y-12">
+      {latest.map((item) => <Item {...item} />)}
+    </div> -->
   </div>
 </section>
