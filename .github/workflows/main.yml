@@ -5,6 +5,9 @@ on:
   push:
     tags:
       - "v*"
+  schedule:
+    - cron: 55 8 * * *
+    - cron: 55 12 * * *
 
 jobs:
   assets:
