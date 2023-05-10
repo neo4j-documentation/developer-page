@@ -9,6 +9,7 @@ export enum FeedItemType {
 
 interface Feed {
     type: FeedItemType;
+    link: string;
     icon: string;
     cta: string;
     items: FeedItem[]
@@ -43,16 +44,16 @@ function getIcon(type: FeedItemType): string {
 function getCTA(type: FeedItemType) {
     switch (type) {
         case FeedItemType.LiveStream:
-            return "Watch";
+            return "Neo4j Live Streams";
 
         case FeedItemType.Video:
-            return "Watch";
+            return "Watch Neo4j on YouTube";
 
         case FeedItemType.Podcast:
-            return "Listen";
+            return "Listen to GraphStuff.fm";
 
         default:
-            return "Read"
+            return "Neo4j Developer Articles"
     }
 }
 
@@ -107,9 +108,10 @@ async function getYoutubeFeed(type: FeedItemType, params: Record<string, any>): 
     });
 }
 
-function formatFeed(type: FeedItemType, items: FeedItem[]): Feed {
+function formatFeed(type: FeedItemType, link: string, items: FeedItem[]): Feed {
     return {
         type,
+        link,
         icon: getIcon(type),
         cta: getCTA(type),
         items,
@@ -136,10 +138,10 @@ export async function getAllFeeds(limit = 4): Promise<Feed[]> {
     }, (item, feed) => feed.image.url)
 
     return [
-        formatFeed(FeedItemType.Blog, blog.slice(0, limit)),
-        formatFeed(FeedItemType.LiveStream, liveStreams.slice(0, limit)),
-        formatFeed(FeedItemType.Podcast, podcast.slice(0, limit)),
-        formatFeed(FeedItemType.Video, youtube.slice(0, limit)),
+        formatFeed(FeedItemType.Blog, 'https://neo4j.com/developer-blog/', blog.slice(0, limit)),
+        formatFeed(FeedItemType.LiveStream, 'https://twitch.tv/neo4j', liveStreams.slice(0, limit)),
+        formatFeed(FeedItemType.Podcast, 'https://graphstuff.fm', podcast.slice(0, limit)),
+        formatFeed(FeedItemType.Video, 'https://youtube.com/neo4j', youtube.slice(0, limit)),
     ]
 }
 
@@ -150,7 +152,7 @@ export async function getLatest(limit = 6): Promise<FeedItem[]> {
     const blog = await getRssFeed(FeedItemType.Blog, 'https://neo4j.com/developer-blog/feed/', {
         author: {
             name: 'Neo4j Developer Blog',
-            url: 'https://neo4j.com/blog',
+            url: 'https://neo4j.com/developer-blog',
         }
     })
     const podcast = await getRssFeed(FeedItemType.Podcast, 'https://feeds.simplecast.com/RIcqOK_t', {

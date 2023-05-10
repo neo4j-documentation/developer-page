@@ -1,0 +1,32 @@
+<code id="example-query" class="cypher hljs">
+  <span class="match">
+    <span class="hljs-keyword opaque">MATCH</span>
+    <span class="node opaque">(j</span><span class="opaque node nodelabel"
+      >:<span class="hljs-type">Person</span>{" "}
+    </span>
+    <span class="node inline-where opaque">{'{name: "Adam"}'}</span><span
+      class="node opaque">)</span
+    ><span class="relationship opaque"
+      >-[r:<span class="hljs-type">LIKES</span>]-&gt;</span
+    >
+    <span class="node opaque"
+      >(tech:<span class="hljs-type">Technology</span>)</span
+    ><span class="relationship opaque"
+      >&lt;-[r2:<span class="hljs-type">LIKES</span>]-</span
+    ></span
+  ><span class="node opaque"
+    >(p:<span class="hljs-type nodelabel">Person</span>)</span
+  >
+  <br />
+  <span class="where opaque">
+    <span class="hljs-keyword">WHERE</span> tech.type <span class="hljs-keyword"
+      >IN</span
+    > [<span class="hljs-string">'Graphs'</span>, <span class="hljs-string"
+      >'Development'</span
+    >]
+  </span>
+  <br />
+  <span class="return opaque"
+    ><span class="hljs-keyword">RETURN</span> p.name;</span
+  >
+</code>

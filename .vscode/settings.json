@@ -1,9 +1,9 @@
 {
-    "editor.formatOnSave": true,
     "files.associations": {
-        "*.min.*": "minified"
+        "**/cypher.min.astro": "minified"
     },
     "[minified]": {
         "editor.formatOnSave": false
-    }
+    },
+    "editor.formatOnSave": true
 }

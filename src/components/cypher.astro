@@ -1,9 +1,24 @@
 ---
-import Central from "./content/central.astro";
-import CypherBlock from "./example-query/interactive";
+import CypherBlock from "./example-query/interactive.astro";
 ---
 
-<CypherBlock client:only="read" />
+<CypherBlock />
+
+<script>
+  const cypher = document.getElementById("example-query");
+  document.querySelectorAll(".hoverable").forEach((element) => {
+    const target = element.dataset.target;
+
+    element.addEventListener("mouseover", () => {
+      cypher?.classList.add("spotlight");
+      cypher?.classList.add(target);
+    });
+    element.addEventListener("mouseout", () => {
+      cypher?.classList.remove("spotlight");
+      cypher?.classList.remove(target);
+    });
+  });
+</script>
 
 <style is:global>
   .code-container {

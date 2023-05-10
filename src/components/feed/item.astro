@@ -1,6 +1,5 @@
 ---
-const { published, url, title, type, cta, image, description, author } =
-  Astro.props;
+const { published, url, title, type, image, description, author } = Astro.props;
 ---
 
 <!-- <div class="cell small-12 medium-6 large-3"> -->
@@ -21,7 +20,7 @@ const { published, url, title, type, cta, image, description, author } =
     style="width: auto; max-width: 100%;"
   /> -->
 
-  <p>
+  <p class="text-sm text-muted mb-1">
     {
       new Intl.DateTimeFormat("en-US", {
         day: "numeric",
@@ -30,9 +29,9 @@ const { published, url, title, type, cta, image, description, author } =
       }).format(published)
     }
   </p>
-  <div class="h6 card-title m-0" style="height: 120px;">{title}</div>
-  <div class="card-cta">
+  <div class="h6 card-title m-0" style="height: 92px;">{title}</div>
+  <!-- <div class="card-cta">
     <a class="arrowed" target="_blank" href={url}>{cta}</a>
-  </div>
+  </div> -->
 </div>
 <!-- </div> -->
