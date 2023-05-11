@@ -6,20 +6,11 @@ const { published, url, title, type, image, description, author } = Astro.props;
 <div
   class="card card-hover-animation bg-transparent border-0 mb-8 card-full-clickable"
 >
-  <!-- <img style="max-width: 42px;" src={icon} alt={title} /> -->
-  <!-- <p class="text-overline mt-8">{type}</p> -->
   <div
-    style={`height: 180px; width: 100%; background: url(${image}); background-size: cover; background-position: top center`}
+    style={`height: 180px; width: 100%; background: #018BFF url(${image}) no-repeat; background-size: auto 100%; background-position: top center; border-radius: 5px`}
     class="mb-4"
   >
   </div>
-  <!-- <img
-    src={image}
-    alt={`Thumbnail for ${title}`}
-    class="mb-4"
-    style="width: auto; max-width: 100%;"
-  /> -->
-
   <p class="text-sm text-muted mb-1">
     {
       new Intl.DateTimeFormat("en-US", {
@@ -29,9 +20,7 @@ const { published, url, title, type, image, description, author } = Astro.props;
       }).format(published)
     }
   </p>
-  <div class="h6 card-title m-0" style="height: 92px;">{title}</div>
-  <!-- <div class="card-cta">
-    <a class="arrowed" target="_blank" href={url}>{cta}</a>
-  </div> -->
+  <div class="h6 card-title m-0" style="height: 92px;">
+    <a href={url} style="color: #151e29; text-decoration: none;"> {title}</a>
+  </div>
 </div>
-<!-- </div> -->

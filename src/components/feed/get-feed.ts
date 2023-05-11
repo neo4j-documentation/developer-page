@@ -80,7 +80,7 @@ async function getRssFeed(type: FeedItemType, url: string, defaultItem: Partial<
     })
 }
 
-async function getYoutubeFeed(type: FeedItemType, params: Record<string, any>): Promise<FeedItem[]> {
+async function getYoutubeFeed(type: FeedItemType, params: Record<string, any>, exclude: FeedItem[] = []): Promise<FeedItem[]> {
     const url = new URL('https://www.youtube.com/feeds/videos.xml')
     for (const [key, value] of Object.entries(params)) {
         url.searchParams.set(key, value)
@@ -105,7 +105,7 @@ async function getYoutubeFeed(type: FeedItemType, params: Record<string, any>): 
                 url: `https://youtube.com/channel/${entry['yt:channelId']}`,
             }
         }
-    });
+    }).filter((entry: FeedItem) => exclude.find(other => entry.url === other.url) === undefined);
 }
 
 function formatFeed(type: FeedItemType, link: string, items: FeedItem[]): Feed {
@@ -120,7 +120,7 @@ function formatFeed(type: FeedItemType, link: string, items: FeedItem[]): Feed {
 
 export async function getAllFeeds(limit = 4): Promise<Feed[]> {
     const youtube = await getYoutubeFeed(FeedItemType.Video, { channel_id: 'UCvze3hU6OZBkB1vkhH2lH9Q' })
-    const liveStreams = await getYoutubeFeed(FeedItemType.LiveStream, { playlist_id: 'PL9Hl4pk2FsvW1NtrhILyptfFnLMjg5Vmc' })
+    const liveStreams = await getYoutubeFeed(FeedItemType.LiveStream, { playlist_id: 'PL9Hl4pk2FsvW1NtrhILyptfFnLMjg5Vmc' }, youtube)
     const blog = await getRssFeed(FeedItemType.Blog, 'https://neo4j.com/developer-blog/feed/', {
         author: {
             name: 'Neo4j Developer Blog',

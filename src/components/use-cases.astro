@@ -3,14 +3,14 @@ import Central from "./content/central.astro";
 import Start from "./start.astro";
 
 const usecases = [
-  {
-    title: "Knowledge Graphs",
-    image:
-      "https://dist.neo4j.com/wp-content/uploads/20210601152051/Use-Case-Knowledge-Graphs.png",
-    description:
-      "Knowledge graphs ensure search results are contextually relevant to your needs, but that’s just the beginning. Organizations like NASA, AstraZeneca, NBC News and Lyft use knowledge graphs for a variety...",
-    link: "https://neo4j.com/use-cases/knowledge-graph/",
-  },
+  // {
+  //   title: "Knowledge Graphs",
+  //   image:
+  //     "https://dist.neo4j.com/wp-content/uploads/20210601152051/Use-Case-Knowledge-Graphs.png",
+  //   description:
+  //     "A Neo4j knowledge graph is an insight layer of interconnected data enriched with semantics, so you can reason with the underlying data and use it for complex decision-making.",
+  //   link: "https://neo4j.com/use-cases/knowledge-graph/",
+  // },
   {
     title: "Recommendations",
     image:
@@ -26,6 +26,14 @@ const usecases = [
     description:
       "Real-time analysis of data relationships is essential to uncovering fraud rings and other sophisticated scams before fraudsters and criminals cause lasting damage.",
     link: "https://neo4j.com/use-cases/fraud-detection/",
+  },
+  {
+    title: "Life Sciences",
+    image:
+      "https://dist.neo4j.com/wp-content/uploads/20210601152052/Use-Case-Life-Sciences.png",
+    description:
+      "Pharmaceutical companies, chemical manufacturers and biotech companies are using Neo4j to analyze data in ways not previously not possible without graphs.",
+    link: "https://neo4j.com/use-cases/life-sciences/",
   },
 ];
 ---
@@ -46,7 +54,7 @@ const usecases = [
       <div class="grid-x grid-padding-x pt-0">
         {
           usecases.map((usecase) => (
-            <div class="usecase cell small-12 medium-12 large-4  mb-8">
+            <div class="usecase card card-minimal-style cell small-12 medium-12 large-4  mb-8">
               <div class="card card-hover-animation bg-transparent border-0 card-full-clickable" />
               <div class="mb-8 use-case-image">
                 <img
