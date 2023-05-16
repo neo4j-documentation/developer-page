@@ -119,8 +119,8 @@ function formatFeed(type: FeedItemType, link: string, items: FeedItem[]): Feed {
 }
 
 export async function getAllFeeds(limit = 4): Promise<Feed[]> {
-    const youtube = await getYoutubeFeed(FeedItemType.Video, { channel_id: 'UCvze3hU6OZBkB1vkhH2lH9Q' })
-    const liveStreams = await getYoutubeFeed(FeedItemType.LiveStream, { playlist_id: 'PL9Hl4pk2FsvW1NtrhILyptfFnLMjg5Vmc' }, youtube)
+    const liveStreams = await getYoutubeFeed(FeedItemType.LiveStream, { playlist_id: 'PL9Hl4pk2FsvW1NtrhILyptfFnLMjg5Vmc' })
+    const youtube = await getYoutubeFeed(FeedItemType.Video, { channel_id: 'UCvze3hU6OZBkB1vkhH2lH9Q' }, liveStreams)
     const blog = await getRssFeed(FeedItemType.Blog, 'https://neo4j.com/developer-blog/feed/', {
         author: {
             name: 'Neo4j Developer Blog',
