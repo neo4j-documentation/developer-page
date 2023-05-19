@@ -1154,6 +1154,12 @@
                 flex: 1;
                 justify-content: flex-end;
               }
+              .n-contact-us-menu a {
+                font-weight: 700;
+                color: #006fd6;
+                line-height: 1;
+                padding: 0.85em 2em;
+              }
             </style>
 
             <ul class="items-center z-50 flex m-0 h-full">
@@ -1441,7 +1447,11 @@
                         >
                       </a>
                       <!-- Maybe flyout submenu -->
-                      <!-- <div class="n-icon n-icon-chevron-right" style="height: 10px; width: 10px; position: absolute; right: 1rem; top: calc(50% - 8px);"></div> -->
+                      <div
+                        class="n-icon n-icon-chevron-right"
+                        style="height: 10px; width: 10px; position: absolute; right: 1rem; top: calc(50% - 8px);"
+                      >
+                      </div>
                       <div
                         class="flyout hidden absolute pt-0 z-50 top-full"
                         style="left: 100%; top: 0; width: max-content;"
@@ -2087,8 +2097,7 @@
                   data-l="Pricing"
                   href="/pricing"
                   class="text-charcoal hover:text-black p-4 text-sm font-normal cursor-pointer"
-                  >Pricing</a
-                >
+                  >Pricing</a>
               </li><li
                 id="n-contact-us-menu"
                 tabindex="0"
@@ -2098,19 +2107,17 @@
                   data-l="Contact Us"
                   href="/contact-us/"
                   class="text-charcoal hover:text-black p-4 text-sm font-normal cursor-pointer"
-                  >Contact Us</a
-                >
+                  >Contact Us</a>
               </li><li
-                id="n-get-started-menu"
+                id="n-get-started-free-menu"
                 tabindex="0"
-                class="group relative m-0 flex items-center self-stretch n-get-started-menu"
+                class="group relative m-0 flex items-center self-stretch n-get-started-free-menu"
               >
                 <a
-                  data-l="Get Started"
+                  data-l="Get Started Free"
                   href="/cloud/platform/aura-graph-database/?ref=nav-get-started-cta"
-                  class="text-charcoal hover:text-black p-4 text-sm font-normal cursor-pointer vwo_loaded vwo_loaded_78"
-                  >Signup</a
-                >
+                  class="text-charcoal hover:text-black p-4 text-sm font-normal cursor-pointer"
+                  >Get Started Free</a>
               </li>
             </ul>
           </div>
@@ -2120,8 +2127,6 @@
   </div>
 </div>
 <script>
-  import type { log } from "astro/dist/core/logger/core";
-
   document
     .querySelectorAll('[data-toggle="toggle-neo4j-mobile-menu-container"]')
     .forEach((toggle) => {
