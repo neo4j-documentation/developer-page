@@ -1,9 +1,9 @@
 ---
-const { link, image, overline, text } = Astro.props;
+const { link, image, overline, text, event } = Astro.props;
 ---
 
 <div class="cell large-4 medium-4">
-  <a href={link}>
+  <a href={link} data-l={event}>
     <div class="card card-minimal-style py-8 px-6">
       <img style={{ maxWidth: "42px" }} src={image} alt={overline} />
       <p class="text-overline mt-4">{overline}</p>
