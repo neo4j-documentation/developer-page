@@ -1,8 +1,30 @@
-<section id="cta">
-  <div class="grid-container p-12 bg-whitesmoke rounded-lg">
-    <div class="grid-x">
-      <div class="cell text-center medium-8 medium-offset-2">
-        <h3>Neo4j Developer Updates In Your Inbox</h3>
+<section id="get-started-free">
+  <div class="grid-container">
+    <div class="grid-x align-center items-center">
+      <img
+        class="started-bg-right show-for-medium"
+        src="https://dist.neo4j.com/wp-content/uploads/20230921083327/homepage-viz_ART-left.svg"
+        alt=""
+      />
+      <img
+        class="started-bg-left show-for-medium"
+        src="https://dist.neo4j.com/wp-content/uploads/20230921083329/homepage-viz_ART-right.svg"
+        alt=""
+      />
+
+      <img
+        class="started-bg-left hide-for-medium"
+        src="https://dist.neo4j.com/wp-content/uploads/20230921082858/homepage-viz_left-side-art_375.svg"
+        alt=""
+      />
+      <img
+        class="started-bg-right hide-for-medium"
+        src="https://dist.neo4j.com/wp-content/uploads/20230921082910/homepage-viz_right-side-art_375.svg"
+        alt=""
+      />
+
+      <div class="cell small-12 medium-6 text-white">
+        <h3>Neo4j Developer Updates<br /> In Your Inbox</h3>
         <p>
           Want in on the latest and greatest? Our weekly developer-focused
           newsletter showcases what's emerging with the next-gen of graph
@@ -17,28 +39,118 @@
           src="https://app-ab10.marketo.com/js/forms2/js/forms2.min.js"
         ></script>
         <script type="text/javascript">
-          MktoForms2.loadForm(
-            "//app-ab10.marketo.com",
-            "710-RRC-335",
-            2374,
-            function (form) {
-              // Add an onSuccess handler
-              form.onSuccess(function (values, followUpUrl) {
-                document.getElementById("thks-subs").innerHTML =
-                  "<p class='byline mb-0'>Thank you! Email Node added.</p><p class='byline'>Receive more news and events: <a href='https://neo4j.com/manage-subscriptions/'>manage your subscriptions.<a/></p>";
-                form.getFormElem().hide();
-                return false;
-              });
-            }
-          );
+        MktoForms2.loadForm(
+          "//app-ab10.marketo.com",
+          "710-RRC-335",
+          2374,
+          function (form) {
+            // Add an onSuccess handler
+            form.onSuccess(function (values, followUpUrl) {
+              document.getElementById("thks-subs").innerHTML =
+                "<p class='byline mb-0'>Thank you! Email Node added.</p><p class='byline'>Receive more news and events: <a href='https://neo4j.com/manage-subscriptions/'>manage your subscriptions.<a/></p>";
+              form.getFormElem().hide();
+              return false;
+            });
+          }
+        );
         </script>
       </div>
     </div>
   </div>
-</section>
 
-<style>
-  #thks-subs {
-    font-weight: bold;
-  }
-</style>
+  <style>
+    #get-started-free {
+      background-color: #0a6190;
+      /* background-image: url(https://dist.neo4j.com/wp-content/uploads/20230508150128/homepage_wayfinder-mod.svg); */
+      background-repeat: no-repeat;
+
+      padding-top: 6rem !important;
+      padding-bottom: 6rem !important;
+
+      text-align: center;
+      background-position: center;
+      background-size: auto 100%;
+      position: relative;
+      /* z-index: -1; */
+    }
+    /* #get-started-free mobile */
+    #get-started-free {
+      position: relative;
+      overflow: hidden;
+      z-index: 3;
+    }
+
+    #get-started-free .started-bg-left {
+      left: 0;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      z-index: -1;
+    }
+
+    #get-started-free .started-bg-right {
+      right: 0;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      z-index: -1;
+    }
+
+    /* #get-started-free desktop */
+    @media screen and (min-width: 767px) {
+      #get-started-free .started-bg-left {
+        left: 57%;
+      }
+
+      #get-started-free .started-bg-right {
+        right: 57%;
+      }
+    }
+
+    #get-started-free button {
+      border: 1px solid white !important;
+    }
+
+    #get-started-free form .mktoForm label {
+      color: white !important;
+    }
+
+    #get-started-free input {
+      background-color: transparent !important;
+      border: 1px solid white !important;
+    }
+
+    @media screen and (max-width: 1023px) {
+      #homepage_partners {
+        background-position-y: 37rem;
+        background-position-x: -106rem;
+      }
+
+      #get-started-free {
+        background-position-x: -109rem;
+        background-position-y: -3rem;
+        padding-bottom: 4rem !important;
+        padding-top: 4rem !important;
+      }
+
+      #get-started-free h3 {
+        font-size: 40px;
+      }
+
+      #get-started-free p {
+        font-size: 20px;
+      }
+
+      #get-started-free a {
+        width: 100%;
+        font-size: 16px;
+      }
+    }
+  </style>
+
+  <style>
+    #thks-subs {
+      font-weight: bold;
+    }
+  </style>
+</section>
